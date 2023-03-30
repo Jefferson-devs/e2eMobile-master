@@ -7,24 +7,23 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  name: 'e2eMobile',
+  name: 'e2eMobile-master',
   tests: './*Login.ts',
   output: './output',
   helpers: {
     Appium: {
       platform: 'Android',
       app: '/Users/jeffersonsoaresdesouza/Downloads/app-qa.apk',
-
       desiredCapabilities: {
-        appPackage: 'br.com.apcapsp.app',
-        appActivity: 'Apcap da Sorte-QA',
-        deviceName: 'pixel',
-        platformVersion: '12',
+        appPackage: 'br.com.apcapsp.app.debug',
+        appActivity: 'br.com.apcapsp.app.SplashActivity',
+        deviceName: 'Pixelpie',
+        platformVersion: '9',
       },
     },
   },
   include: {
-    I: './steps_file',
+    I: './metodosFile',
   },
   bootstrap: null,
   mocha: {},

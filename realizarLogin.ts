@@ -1,3 +1,5 @@
 Feature('realizarLogin');
 
-Scenario('test something', ({ I }) => {});
+Scenario('Teste de configuracão', ({ I }) => {
+  I.wait(5);
+});
