@@ -12,6 +12,8 @@ export const config: CodeceptJS.MainConfig = {
   output: './output',
   helpers: {
     Appium: {
+      port: 4723,
+      URL: 'localhost',
       platform: 'Android',
       app: '/Users/jeffersonsoaresdesouza/Downloads/app-qa.apk',
       desiredCapabilities: {
@@ -22,9 +24,8 @@ export const config: CodeceptJS.MainConfig = {
       },
     },
   },
-  include: {
-    I: './metodosFile',
-  },
+  include: ['./metodosFile', './realizarLogin.ts'],
+  files: ['steps.d.ts'],
   bootstrap: null,
   mocha: {},
   plugins: {
