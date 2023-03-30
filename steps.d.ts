@@ -1,13 +1,16 @@
 /// <reference types='codeceptjs' />
-type steps_file = typeof import('./metodosFile');
+type metodosFile = typeof import('./metodosFile');
+type realizarLogin = typeof import('./realizarLogin');
 
 declare namespace CodeceptJS {
   interface SupportObject {
     I: I;
     current: any;
+    0: metodosFile;
+    1: realizarLogin;
   }
   interface Methods extends Appium {}
-  interface I extends ReturnType<steps_file> {}
+  interface I extends WithTranslation<Methods> {}
   namespace Translation {
     interface Actions {}
   }
