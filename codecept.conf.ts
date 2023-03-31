@@ -20,9 +20,8 @@ export const config: CodeceptJS.MainConfig = {
       desiredCapabilities: {
         deviceName: process.env.DEVICE,
         platformVersion: process.env.VERSION,
-        bundleId: process.env.BUNDLE_ID,
-        app: process.env.APP,
-        useNewWDA: true,
+        appPackage: process.env.PLATFORM == 'Android' ? process.env.PACKAGE : '',
+        appActivity: process.env.PLATFORM == 'Android' ? process.env.ACTIVITY : '',
       },
     },
   },

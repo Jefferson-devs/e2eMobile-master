@@ -1,7 +1,7 @@
 {
   "name": "e2emobile",
   "version": "1.0.0",
-  "description": "Projeto de teste e2e  automatizado do aplicativo apcap da sorte ADS",
+  "description": "Projeto de teste e2e automatizado do aplicativo apcap da sorte ADS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
