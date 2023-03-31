@@ -1,4 +1,5 @@
 import { setHeadlessWhen, setCommonPlugins } from '@codeceptjs/configure';
+
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
@@ -14,13 +15,14 @@ export const config: CodeceptJS.MainConfig = {
     Appium: {
       port: 4723,
       URL: 'localhost',
-      platform: 'Android',
-      app: '/Users/jeffersonsoaresdesouza/Downloads/app-qa.apk',
+      platform: process.env.PLATFORM,
+      app: process.env.APP,
       desiredCapabilities: {
-        appPackage: 'br.com.apcapsp.app.debug',
-        appActivity: 'br.com.apcapsp.app.SplashActivity',
-        deviceName: 'Pixelpie',
-        platformVersion: '9',
+        deviceName: process.env.DEVICE,
+        platformVersion: process.env.VERSION,
+        bundleId: process.env.BUNDLE_ID,
+        app: process.env.APP,
+        useNewWDA: true,
       },
     },
   },

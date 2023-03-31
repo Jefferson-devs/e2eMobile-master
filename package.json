@@ -4,7 +4,9 @@
   "description": "Projeto de teste e2e  automatizado do aplicativo apcap da sorte ADS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ios": "PLATFORM=iOS APP=/Users/jeffersonsoaresdesouza/Downloads/ApcapSP.app DEVICE=iPhone\\ 14 xcrun simctl install iPhone\\ 14 $APP && xcrun instruments -w $DEVICE -t 'iPhone 14 (16.2)' && VERSION=16.2 npx codeceptjs run",
+    "android": "PLATFORM=Android APP='/Users/jeffersonsoaresdesouza/Downloads/app-qa.apk' DEVICE=android_device VERSION=9 PACKAGE=br.com.apcapsp.app.debug ACTIVITY=br.com.apcapsp.app.SplashActivity npx codeceptjs run --steps"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,9 @@
   },
   "homepage": "https://github.com/Jefferson-devs/e2eMobile#readme",
   "dependencies": {
+    "appium-xcuitest-driver": "^4.21.1",
     "codeceptjs": "^3.4.1",
+    "dotenv": "^16.0.3",
     "node": "^19.8.1",
     "webdriverio": "^8.6.9"
   },
