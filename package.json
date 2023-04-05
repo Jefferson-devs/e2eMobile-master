@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ios": "PLATFORM=iOS APP=/Users/jeffersonsoaresdesouza/Downloads/ApcapSP.app DEVICE=iPhone\\ 14 xcrun simctl install iPhone\\ 14 $APP && xcrun instruments -w $DEVICE -t 'iPhone 14 (16.2)' && VERSION=16.2 npx codeceptjs run",
+    "ios": "PLATFORM=iOS APP=/Users/jeffersonsoaresdesouza/Downloads/ApcapSP.app DEVICE='iPhone 14' $DEVICE -t 'iPhone 14 (16.4)' && VERSION=16.4 npx codeceptjs run --steps",
     "android": "PLATFORM=Android APP='/Users/jeffersonsoaresdesouza/Downloads/app-qa.apk' DEVICE=android_device VERSION=9 PACKAGE=br.com.apcapsp.app.debug ACTIVITY=br.com.apcapsp.app.SplashActivity npx codeceptjs run --steps"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "codeceptjs": "^3.4.1",
     "dotenv": "^16.0.3",
     "node": "^19.8.1",
+    "stack-trace": "^1.0.0-pre2",
     "webdriverio": "^8.6.9"
   },
   "devDependencies": {
