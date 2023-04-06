@@ -1,4 +1,4 @@
-Feature('performLogin');
+Feature('Autenticação de usuário no ApCap da Sorte');
 
 Scenario('Login with sucess', ({ I }) => {
   // Efetuando o login com sucesso.
