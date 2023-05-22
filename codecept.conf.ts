@@ -9,7 +9,7 @@ setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
   name: 'e2eMobile-master',
-  tests: './registerUser.ts',
+  tests: './performLogin.ts',
   output: './output',
   helpers: {
     Appium: {
@@ -25,7 +25,7 @@ export const config: CodeceptJS.MainConfig = {
       },
     },
   },
-  include: ['./metodosFile', './performLogin.ts'],
+  include: ['./metodosFile', './performLogin.ts', './registerUser.ts'],
   files: ['steps.d.ts'],
   bootstrap: null,
   mocha: {},

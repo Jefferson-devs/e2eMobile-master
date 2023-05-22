@@ -6,11 +6,11 @@ Scenario('Login with sucess', ({ I }) => {
   I.click('~welcome_login');
   I.fillField('//android.widget.EditText[@content-desc="login_cpf"]', '42467937879');
   I.wait(1);
-  I.waitForElement('~login_password', 5);
+  I.waitForElement('~login_password', 5); //implementar a secret login para nao mostrar senha nos logs
   I.fillField('~login_password', '2023');
   I.tap('ENTRAR');
-  I.wait(8);
-  I.click('X:1005', 'Y:323');
+  I.wait(6);
+  I.tap('[949,277][1054,382]');
 });
 
 Scenario('Login with error in cpf', ({ I }) => {
